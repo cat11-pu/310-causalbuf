@@ -1,0 +1,13 @@
+{
+  "budget": 1,
+  "dup_error_code": "E_DUP_MSG",
+  "self_error_code": "E_SELF_DEP",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "delivered": [], "pending": [], "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "send", "msg": 1, "deps": [] },
+    { "id": 2, "kind": "send", "msg": 2, "deps": [1] },
+    { "id": 3, "kind": "send", "msg": 3, "deps": [4] },
+    { "id": 4, "kind": "send", "msg": 4, "deps": [2] }
+  ]
+}
